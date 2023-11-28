@@ -43,6 +43,6 @@ exports.products = [
         type: productType.other,
         name: 'Candles',
         qty: 9
-    },
+    }
 ];
 //# sourceMappingURL=products.js.map

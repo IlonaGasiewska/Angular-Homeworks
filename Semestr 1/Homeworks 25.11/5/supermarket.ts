@@ -1,6 +1,7 @@
 import { products } from "./products";
-import { productType } from "./products";
 
+import { productType } from "./products";
+ 
 interface Item {
     type: productType,
     name: string,
@@ -14,7 +15,7 @@ class Supermarket {
     private _other:Item[] = [];
 
 
-    addSupplies(items : Item[]) {
+    addSupplies(items:Item[]) {
         for (const item of items) {
             if (item.type === productType.fruit) {
                 this._fruits.push(item);
@@ -59,12 +60,13 @@ class Supermarket {
         console.log('--------------------------------------------------------------------------------------------')
     }
 
-    private _printCategory(items : Item[]) {
+      private _printCategory(items: Item[]) {
         for (const item of items) {
             console.log(item.name + ' (' + item.qty + ' available)');
         }
     }
 }
+
 
 let supermarket = new Supermarket();
 supermarket.addSupplies(products);
